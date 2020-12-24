@@ -81,6 +81,11 @@ template <unsigned N> struct PYPLM {
     ar & p;
   }
 
+  void print(){
+    for (auto element : p)
+      std::cout<< element.second << std::endl;
+  }
+
   PYPLM<N-1> backoff;
   tied_parameter_resampler<crp<unsigned>> tr;
   mutable std::vector<unsigned> lookup;  // thread-local

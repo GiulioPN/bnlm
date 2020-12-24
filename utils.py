@@ -26,14 +26,27 @@ def simulationExample():
 
 	bm.hpypTT(train_data,test_data, 100, 1,1,1,1, estimations, perfomance)
 
-def hpypTT(train_data_file, test_data_file ,samples =100, da = 1, db = 1, sr = 1, ss = 1):
+def hpypTT(train_data_file, test_data_file ,samples =100, da = 1, db = 1, sr = 1, ss = 1, sim_name = "",):
 	'''Train test model'''
 	print("Start alghorithm with "+str(samples)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
 	train_data = getDataFolder()+train_data_file
 	test_data = getDataFolder()+test_data_file
-	estimations = getOutputFolder() + "estimations_samples"+str(samples)+"_da"+str(da)+"_db"+str(db)+"_sr"+str(sr)+"_ss"+str(ss)+".txt"
-	perfomance = getOutputFolder() + "perfomance_samples"+str(samples)+"_da"+str(da)+"_db"+str(db)+"_sr"+str(sr)+"_ss"+str(ss)+".txt"
+	estimations = getOutputFolder() +sim_name+"_estimations_samples"+str(samples)+"_da"+str(da)+"_db"+str(db)+"_sr"+str(sr)+"_ss"+str(ss)+".txt"
+	perfomance = getOutputFolder() +sim_name+"_perfomance_samples"+str(samples)+"_da"+str(da)+"_db"+str(db)+"_sr"+str(sr)+"_ss"+str(ss)+".txt"
 
 	bm.hpypTT(train_data, test_data, samples, da, db, sr, ss, estimations, perfomance)
 
+def hpypBasic(train_data_file = "simple_train.txt", samples =100, da = 1, db = 1, sr = 1, ss = 1):
+	'''Train and print CRPs generated'''
+	print("Start alghorithm with "+str(samples)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
+	train_data = getDataFolder()+train_data_file
+
+	bm.pypTrainBase(train_data, samples, da, db, sr, ss)
+
+def spypBasic(train_data_file = "simple_train.txt", samples =1000, da = 1, db = 1, sr = 1, ss = 1):
+	'''Train and print CRPs generated for a spyp process'''
+	print("Start alghorithm with "+str(samples)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
+	train_data = getDataFolder()+train_data_file
+	text_names = [getDataFolder()+train_data_file, getDataFolder()+train_data_file]
+	bm.spypTrainBase(text_names, samples, da, db, sr, ss)
 

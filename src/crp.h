@@ -356,7 +356,8 @@ class crp {
   template<typename Engine>
   void resample_hyperparameters(Engine& eng,
                                 const unsigned nloop = 5,
-                                const unsigned niterations = 10) {
+                                const unsigned niterations = 10) 
+  {
     assert(has_discount_prior() || has_strength_prior());
     if (num_customers() == 0) return;
     double s = strength_;

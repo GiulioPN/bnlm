@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm bnplm.so
+
+make
+
+mv -v bnplm.so@SO@ bnplm.so
+
+echo "Ready to run !"

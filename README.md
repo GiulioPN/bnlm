@@ -10,7 +10,7 @@ The package consists in two main phases:
 - Analysis: using the function in ```utlis.py``` for the training a teting of the model. The results (evaluation probabilities and performance) are saved in ```output/``` folder. 
 
 ## Installation
-From terminal, in the main directory ```$ make``` 
+From terminal, in the main directory ```$ bash compile```
 
 ## Data 
 
