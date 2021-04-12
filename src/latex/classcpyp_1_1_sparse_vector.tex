@@ -1,0 +1,137 @@
+\hypertarget{classcpyp_1_1_sparse_vector}{}\section{cpyp\+:\+:Sparse\+Vector$<$ T, L\+O\+C\+A\+L\+\_\+\+M\+AX $>$ Class Template Reference}
+\label{classcpyp_1_1_sparse_vector}\index{cpyp\+::\+Sparse\+Vector$<$ T, L\+O\+C\+A\+L\+\_\+\+M\+A\+X $>$@{cpyp\+::\+Sparse\+Vector$<$ T, L\+O\+C\+A\+L\+\_\+\+M\+A\+X $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1const__iterator}{const\+\_\+iterator}}
+\item 
+struct \mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a7fe9424c4508dee8a6bb7ef4aeb5cdff}\label{classcpyp_1_1_sparse_vector_a7fe9424c4508dee8a6bb7ef4aeb5cdff}} 
+{\bfseries Sparse\+Vector} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \&other)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a7a82b07b1af74ad0b8c9dc406794b3ac}\label{classcpyp_1_1_sparse_vector_a7a82b07b1af74ad0b8c9dc406794b3ac}} 
+{\bfseries Sparse\+Vector} (std\+::pair$<$ unsigned, T $>$ $\ast$first, std\+::pair$<$ unsigned, T $>$ $\ast$last)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a28b325943fc12feb4b36356c2fa9b473}\label{classcpyp_1_1_sparse_vector_a28b325943fc12feb4b36356c2fa9b473}} 
+void {\bfseries erase} (unsigned k)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_aa1b26f2ae6f7d21b9e608a400ab937f2}\label{classcpyp_1_1_sparse_vector_aa1b26f2ae6f7d21b9e608a400ab937f2}} 
+const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ T $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ T $>$ \&other)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a59c60662068e05f96d2e14203b5b809f}\label{classcpyp_1_1_sparse_vector_a59c60662068e05f96d2e14203b5b809f}} 
+T const  \& {\bfseries get\+\_\+singleton} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a5e399e98e6f431bc95b315edea3de475}\label{classcpyp_1_1_sparse_vector_a5e399e98e6f431bc95b315edea3de475}} 
+bool {\bfseries nonzero} (unsigned k) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_aadc7ed9b0ad723ceccae00fe5514df06}\label{classcpyp_1_1_sparse_vector_aadc7ed9b0ad723ceccae00fe5514df06}} 
+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (unsigned k)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_aaa2a8471f5fd47adb22ee5910fe7f9b8}\label{classcpyp_1_1_sparse_vector_aaa2a8471f5fd47adb22ee5910fe7f9b8}} 
+void {\bfseries set\+\_\+value} (unsigned k, const T \&v)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a3d9440aedabf41acd21e20504fa310c5}\label{classcpyp_1_1_sparse_vector_a3d9440aedabf41acd21e20504fa310c5}} 
+T \& {\bfseries add\+\_\+value} (unsigned k, const T \&v)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a6ff198d4f5e1bde25f3a9aaba13c094e}\label{classcpyp_1_1_sparse_vector_a6ff198d4f5e1bde25f3a9aaba13c094e}} 
+T {\bfseries get} (unsigned k) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a60728a19fc2b207979c1bd0a1b63b611}\label{classcpyp_1_1_sparse_vector_a60728a19fc2b207979c1bd0a1b63b611}} 
+T {\bfseries value} (unsigned k) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a22be6f6912f469706cf2f798201a6a9e}\label{classcpyp_1_1_sparse_vector_a22be6f6912f469706cf2f798201a6a9e}} 
+T {\bfseries l2norm\+\_\+sq} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a06285bc0fcf3dd86664aef6415269d42}\label{classcpyp_1_1_sparse_vector_a06285bc0fcf3dd86664aef6415269d42}} 
+T {\bfseries l2norm} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a95d0a840d1eb71705c17ff22bd498257}\label{classcpyp_1_1_sparse_vector_a95d0a840d1eb71705c17ff22bd498257}} 
+T {\bfseries pnorm} (const double p) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a8232c9fda49960e650478c9c9de8b416}\label{classcpyp_1_1_sparse_vector_a8232c9fda49960e650478c9c9de8b416}} 
+{\footnotesize template$<$typename S $>$ }\\S {\bfseries tanimoto\+\_\+coef} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ S $>$ \&vec) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a45922a4c5be95d6e72c119c15bf8c404}\label{classcpyp_1_1_sparse_vector_a45922a4c5be95d6e72c119c15bf8c404}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a5f8f3b62adebeece48b0dec6a9cb1bf8}\label{classcpyp_1_1_sparse_vector_a5f8f3b62adebeece48b0dec6a9cb1bf8}} 
+size\+\_\+t {\bfseries num\+\_\+nonzero} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_ae11acd5c8f6fcea5cb98262d674a5711}\label{classcpyp_1_1_sparse_vector_ae11acd5c8f6fcea5cb98262d674a5711}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_ab6b5047179057f594120784fe54eebdd}\label{classcpyp_1_1_sparse_vector_ab6b5047179057f594120784fe54eebdd}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a060ea06d6b5426e06947931b0a05ae6c}\label{classcpyp_1_1_sparse_vector_a060ea06d6b5426e06947931b0a05ae6c}} 
+\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \&other)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a56b0f9bcfacc501b49fd4fdb0f50c44c}\label{classcpyp_1_1_sparse_vector_a56b0f9bcfacc501b49fd4fdb0f50c44c}} 
+{\footnotesize template$<$typename O $>$ }\\\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ O $>$ \&other)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a49594df40000b3985af19df84007f15f}\label{classcpyp_1_1_sparse_vector_a49594df40000b3985af19df84007f15f}} 
+{\footnotesize template$<$typename O $>$ }\\void {\bfseries plus\+\_\+eq\+\_\+v\+\_\+times\+\_\+s} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ O $>$ \&other, const O scalar)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a68b75ee85385070d85657219b358ca7b}\label{classcpyp_1_1_sparse_vector_a68b75ee85385070d85657219b358ca7b}} 
+\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \&other)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a402c045bd9b8126a35f865a76870e1c6}\label{classcpyp_1_1_sparse_vector_a402c045bd9b8126a35f865a76870e1c6}} 
+\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \& {\bfseries operator$\ast$=} (const T \&scalar)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a3bec2d66757d348ea72bbd16d3afe90a}\label{classcpyp_1_1_sparse_vector_a3bec2d66757d348ea72bbd16d3afe90a}} 
+\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}} \& {\bfseries operator/=} (const T \&scalar)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_acc496c92f53002a95fec694ee9d5fcc6}\label{classcpyp_1_1_sparse_vector_acc496c92f53002a95fec694ee9d5fcc6}} 
+\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ T $>$ {\bfseries erase\+\_\+zeros} (const T \&E\+P\+S\+I\+L\+ON=1e-\/4) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a34bf71e6275b54c7608508a5c251dc37}\label{classcpyp_1_1_sparse_vector_a34bf71e6275b54c7608508a5c251dc37}} 
+\mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1iterator}{iterator}} {\bfseries find} (unsigned k)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a21773e7e8128c0f17b062795c9ebe239}\label{classcpyp_1_1_sparse_vector_a21773e7e8128c0f17b062795c9ebe239}} 
+\mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1iterator}{iterator}} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_ab5cd903c798c3f649fd9471f7369ccd3}\label{classcpyp_1_1_sparse_vector_ab5cd903c798c3f649fd9471f7369ccd3}} 
+\mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1iterator}{iterator}} {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_acacf23282cdeaa77a2b2c9dddd9a8327}\label{classcpyp_1_1_sparse_vector_acacf23282cdeaa77a2b2c9dddd9a8327}} 
+\mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1const__iterator}{const\+\_\+iterator}} {\bfseries find} (unsigned k) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a7fc6f661fefc739871b7718cfa70f9b1}\label{classcpyp_1_1_sparse_vector_a7fc6f661fefc739871b7718cfa70f9b1}} 
+\mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1const__iterator}{const\+\_\+iterator}} {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a425e531a0ef32ceec8772072ad107524}\label{classcpyp_1_1_sparse_vector_a425e531a0ef32ceec8772072ad107524}} 
+\mbox{\hyperlink{structcpyp_1_1_sparse_vector_1_1const__iterator}{const\+\_\+iterator}} {\bfseries end} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a53eb971c2d78befb5d9eef9afc55488b}\label{classcpyp_1_1_sparse_vector_a53eb971c2d78befb5d9eef9afc55488b}} 
+void {\bfseries init\+\_\+vector} (std\+::vector$<$ T $>$ $\ast$vp) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_abfe6a0368faac0dfd883e96e27d228d6}\label{classcpyp_1_1_sparse_vector_abfe6a0368faac0dfd883e96e27d228d6}} 
+void {\bfseries init\+\_\+vector} (std\+::vector$<$ T $>$ \&v) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a8edef03778570d73e923fc65b4c3cb4b}\label{classcpyp_1_1_sparse_vector_a8edef03778570d73e923fc65b4c3cb4b}} 
+T {\bfseries dot} (const std\+::vector$<$ T $>$ \&v) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a90c9d4bca95c9bc4a5ee406800fc124b}\label{classcpyp_1_1_sparse_vector_a90c9d4bca95c9bc4a5ee406800fc124b}} 
+T {\bfseries dot} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ T $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_ac35c07d95026e5585a056402b5f44739}\label{classcpyp_1_1_sparse_vector_ac35c07d95026e5585a056402b5f44739}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ T $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_ab48e4e466ac30efb7859f5f5c1bffb1b}\label{classcpyp_1_1_sparse_vector_ab48e4e466ac30efb7859f5f5c1bffb1b}} 
+void {\bfseries swap} (\mbox{\hyperlink{classcpyp_1_1_sparse_vector}{Sparse\+Vector}}$<$ T $>$ \&other)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_a70497bd7e6b62ebf678fec01c394138f}\label{classcpyp_1_1_sparse_vector_a70497bd7e6b62ebf678fec01c394138f}} 
+{\footnotesize template$<$class Archive $>$ }\\void {\bfseries save} (Archive \&ar, const unsigned int) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1_sparse_vector_aec6d230f8d1bc68f17015623aafb6244}\label{classcpyp_1_1_sparse_vector_aec6d230f8d1bc68f17015623aafb6244}} 
+{\footnotesize template$<$class Archive $>$ }\\void {\bfseries load} (Archive \&ar, const unsigned int)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+msparse\+\_\+vector.\+h\end{DoxyCompactItemize}

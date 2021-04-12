@@ -36,6 +36,7 @@ int main(int argc, char** argv) {
   vector<vector<unsigned> > test;
   ReadFromFile(test_file, &dict, &test, &tv);
   PYPLM<kORDER> lm(vocabe.size(), 1, 1, 1, 1);
+  
   vector<unsigned> ctx(kORDER - 1, kSOS);
   for (int sample=0; sample < samples; ++sample) {
     for (const auto& s : corpuse) {
@@ -52,6 +53,7 @@ int main(int argc, char** argv) {
       if (sample % 30u == 29) lm.resample_hyperparameters(eng);
     } else { cerr << '.' << flush; }
   }
+  
   double llh = 0;
   unsigned cnt = 0;
   unsigned oovs = 0;

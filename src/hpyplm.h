@@ -82,14 +82,18 @@ template <unsigned N> struct PYPLM {
   }
 
   void print(){
-    for (auto element : p)
-      std::cout<< element.second << std::endl;
+    for (auto element : p){
+      std::cout<<"Context: "<< element.first[0] << std::endl;
+      std::cout<<"\t"<<element.second << std::endl;
+    }
   }
 
   PYPLM<N-1> backoff;
   tied_parameter_resampler<crp<unsigned>> tr;
   mutable std::vector<unsigned> lookup;  // thread-local
-  std::unordered_map<std::vector<unsigned>, crp<unsigned>, uvector_hash> p;  // .first = context .second = CRP
+  //std::unordered_map<std::vector<unsigned>, crp<unsigned>, uvector_hash> p;  // .first = context .second = CRP
+  public:
+    std::unordered_map<std::vector<unsigned>, crp<unsigned>, uvector_hash> p;  // .first = context .second = CRP
 };
 
 }

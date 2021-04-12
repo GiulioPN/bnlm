@@ -44,6 +44,22 @@ inline unsigned sample_bernoulli(const F a, const F b, Engine& eng) {
   return static_cast<unsigned>(sample_uniform01<F>(eng) > (a / z));
 }
 
+/*
+* shape_param = alpha
+* rate_param = beta
+*/
+template<typename F, typename Engine>
+inline F sample_gamma(const F& shape_param, const F& rate_param, Engine& eng) {
+  return std::gamma_distribution<F> (shape_param, rate_param)(eng);
+}
+
+template<typename F, typename Engine>
+inline F sample_beta(const F& shape_param, const F& rate_param, Engine& eng) {
+  const F x = sample_gamma(shape_param, 1.0, eng);
+  const F y = sample_gamma(rate_param, 1.0, eng);
+  return (x)/(x+y);
+}
+
 // multinomial distribution parameterized by unnormalized probabilities
 // F is the type of the probabilities
 //   MT19937 eng;
@@ -72,6 +88,7 @@ struct multinomial_distribution {
   const std::vector<F>& probs;
   const F sum;
 };
+
 
 }
 

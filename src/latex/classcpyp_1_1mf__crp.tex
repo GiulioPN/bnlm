@@ -1,0 +1,103 @@
+\hypertarget{classcpyp_1_1mf__crp}{}\section{cpyp\+:\+:mf\+\_\+crp$<$ Num\+Floors, Dish, Dish\+Hash $>$ Class Template Reference}
+\label{classcpyp_1_1mf__crp}\index{cpyp\+::mf\+\_\+crp$<$ Num\+Floors, Dish, Dish\+Hash $>$@{cpyp\+::mf\+\_\+crp$<$ Num\+Floors, Dish, Dish\+Hash $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_ab9fd602edabc87c4fdec06fe541027cd}\label{classcpyp_1_1mf__crp_ab9fd602edabc87c4fdec06fe541027cd}} 
+typedef std\+::unordered\+\_\+map$<$ Dish, \mbox{\hyperlink{structcpyp_1_1crp__table__manager}{crp\+\_\+table\+\_\+manager}}$<$ Num\+Floors $>$, Dish\+Hash $>$\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a9528e5f92d3d894f745e74a15a50f930}\label{classcpyp_1_1mf__crp_a9528e5f92d3d894f745e74a15a50f930}} 
+{\bfseries mf\+\_\+crp} (double disc, double strength)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a266fdd5bbb0eb7416fa61b492f5213cf}\label{classcpyp_1_1mf__crp_a266fdd5bbb0eb7416fa61b492f5213cf}} 
+{\bfseries mf\+\_\+crp} (double d\+\_\+strength, double d\+\_\+beta, double c\+\_\+shape, double c\+\_\+rate, double d=0.\+8, double c=1.\+0)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a1389aa5d01aa5fc6df15c327b856d460}\label{classcpyp_1_1mf__crp_a1389aa5d01aa5fc6df15c327b856d460}} 
+void {\bfseries check\+\_\+hyperparameters} ()
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a9694600e6d4cbdde3a173ae05f7b412b}\label{classcpyp_1_1mf__crp_a9694600e6d4cbdde3a173ae05f7b412b}} 
+double {\bfseries discount} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a01818cfd2069bd366aa2923bc1a8b49a}\label{classcpyp_1_1mf__crp_a01818cfd2069bd366aa2923bc1a8b49a}} 
+double {\bfseries strength} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_ab50771a94b82f6e504edbcb14b2cec5c}\label{classcpyp_1_1mf__crp_ab50771a94b82f6e504edbcb14b2cec5c}} 
+void {\bfseries set\+\_\+hyperparameters} (double d, double s)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a9210ff188ae4f11d1383c9e279271780}\label{classcpyp_1_1mf__crp_a9210ff188ae4f11d1383c9e279271780}} 
+void {\bfseries set\+\_\+discount} (double d)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_afe4b482d705075ddc9fcde01bc439ad5}\label{classcpyp_1_1mf__crp_afe4b482d705075ddc9fcde01bc439ad5}} 
+void {\bfseries set\+\_\+strength} (double a)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a0e699421ee1e1bf6141b23cecc0c2107}\label{classcpyp_1_1mf__crp_a0e699421ee1e1bf6141b23cecc0c2107}} 
+bool {\bfseries has\+\_\+discount\+\_\+prior} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_aa4341174b371e8433ab5679aeecb3259}\label{classcpyp_1_1mf__crp_aa4341174b371e8433ab5679aeecb3259}} 
+bool {\bfseries has\+\_\+strength\+\_\+prior} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a65cb2865bba5d4691bebf778f2fedb6a}\label{classcpyp_1_1mf__crp_a65cb2865bba5d4691bebf778f2fedb6a}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_aed0b81e9daa2fca1aed8720b1ec0d200}\label{classcpyp_1_1mf__crp_aed0b81e9daa2fca1aed8720b1ec0d200}} 
+unsigned {\bfseries num\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a6b60b9bd6e9fcbb4e0f66e644ec4e267}\label{classcpyp_1_1mf__crp_a6b60b9bd6e9fcbb4e0f66e644ec4e267}} 
+unsigned {\bfseries num\+\_\+tables} (const Dish \&dish) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a290e1b01d1f88cc0572ef89e2dc57584}\label{classcpyp_1_1mf__crp_a290e1b01d1f88cc0572ef89e2dc57584}} 
+unsigned {\bfseries num\+\_\+customers} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a83e5e0158fb2a3a9d36ab4822c2bf4db}\label{classcpyp_1_1mf__crp_a83e5e0158fb2a3a9d36ab4822c2bf4db}} 
+unsigned {\bfseries num\+\_\+customers} (const Dish \&dish) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a82485f92ae819d8fac9ac3a79abefe3c}\label{classcpyp_1_1mf__crp_a82485f92ae819d8fac9ac3a79abefe3c}} 
+{\footnotesize template$<$class Input\+Iterator , class Input\+Iterator2 , typename Engine $>$ }\\std\+::pair$<$ unsigned, int $>$ {\bfseries increment} (const Dish \&dish, Input\+Iterator p0i, Input\+Iterator2 lambdas, Engine \&eng)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a985694f4664b601f60b2be020d9004f9}\label{classcpyp_1_1mf__crp_a985694f4664b601f60b2be020d9004f9}} 
+{\footnotesize template$<$typename Engine $>$ }\\std\+::pair$<$ unsigned, int $>$ {\bfseries decrement} (const Dish \&dish, Engine \&eng, double $\ast$logq=nullptr)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a4ac30109817b9350ebeeff5c0f580d11}\label{classcpyp_1_1mf__crp_a4ac30109817b9350ebeeff5c0f580d11}} 
+double {\bfseries log\+\_\+likelihood} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_af11c700ba39305a70b711b5fb5d99628}\label{classcpyp_1_1mf__crp_af11c700ba39305a70b711b5fb5d99628}} 
+void {\bfseries update\+\_\+llh\+\_\+add\+\_\+customer\+\_\+to\+\_\+table\+\_\+seating} (unsigned n)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a74ceb4b22a6983747cb34f5626dab66b}\label{classcpyp_1_1mf__crp_a74ceb4b22a6983747cb34f5626dab66b}} 
+void {\bfseries update\+\_\+llh\+\_\+remove\+\_\+customer\+\_\+from\+\_\+table\+\_\+seating} (unsigned n)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a2d1980ec257dd9c1c58eaaedb9c5f162}\label{classcpyp_1_1mf__crp_a2d1980ec257dd9c1c58eaaedb9c5f162}} 
+double {\bfseries log\+\_\+likelihood} (const double \&discount, const double \&strength) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_ac8ba4053ee8bd21ac72001a957f69e48}\label{classcpyp_1_1mf__crp_ac8ba4053ee8bd21ac72001a957f69e48}} 
+{\footnotesize template$<$typename Engine $>$ }\\void {\bfseries resample\+\_\+hyperparameters} (Engine \&eng, const unsigned nloop=5, const unsigned niterations=10)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a7a50940e237a5408d7aefe0120dc1281}\label{classcpyp_1_1mf__crp_a7a50940e237a5408d7aefe0120dc1281}} 
+void {\bfseries print} (std\+::ostream $\ast$out) const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a5b973d55859f6da3a50659cd6758b7ac}\label{classcpyp_1_1mf__crp_a5b973d55859f6da3a50659cd6758b7ac}} 
+const\+\_\+iterator {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_ad4a767b6ba8f735521fe927ee6bb2134}\label{classcpyp_1_1mf__crp_ad4a767b6ba8f735521fe927ee6bb2134}} 
+const\+\_\+iterator {\bfseries end} () const
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_ad0ce890e0e93f564dd0d012bf0eed873}\label{classcpyp_1_1mf__crp_ad0ce890e0e93f564dd0d012bf0eed873}} 
+void {\bfseries swap} (\mbox{\hyperlink{classcpyp_1_1crp}{crp}}$<$ Dish $>$ \&b)
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_a50a7055aff443be0f4d7f923eef6a541}\label{classcpyp_1_1mf__crp_a50a7055aff443be0f4d7f923eef6a541}} 
+{\footnotesize template$<$class Archive $>$ }\\void {\bfseries serialize} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpyp_1_1mf__crp_ad67ffee5e2e32b852be3137fc4fa7e9d}\label{classcpyp_1_1mf__crp_ad67ffee5e2e32b852be3137fc4fa7e9d}} 
+{\footnotesize template$<$class Input\+Iterator , class Input\+Iterator2 $>$ }\\decltype($\ast$$\ast$((Input\+Iterator $\ast$) 0)+0.\+0 {\bfseries prob} )(const Dish \&dish, Input\+Iterator p0i, Input\+Iterator2 lambdas) const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mf\+\_\+crp.\+h\end{DoxyCompactItemize}

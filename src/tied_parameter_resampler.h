@@ -65,8 +65,8 @@ struct tied_parameter_resampler {
     strength = slice_sampler1d([this](double prop_s) { return this->log_likelihood(discount, prop_s); },
                             strength, eng, -discount + std::numeric_limits<double>::min(),
                             std::numeric_limits<double>::infinity(), 0.0, niterations, 100*niterations);
-    std::cerr << "Resampled " << crps.size() << " CRPs (d=" << discount << ",s="
-              << strength << ") = " << log_likelihood(discount, strength) << std::endl;
+    /*std::cerr << "Resampled " << crps.size() << " CRPs (d=" << discount << ",s="
+              << strength << ") = " << log_likelihood(discount, strength) << std::endl;*/
     for (auto& crp : crps)
       crp->set_hyperparameters(discount, strength);
   }
