@@ -6,47 +6,40 @@ sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 import bnplm as bm
 
 
-def getDataFolder():
-	'''Helper function: return the path of the data folder'''
-	data_path = os.getcwd()+"/data/"
-	return data_path
-
-def getOutputFolder():
-	'''Helper function: return the path of the output folder'''
-	output_path = os.getcwd()+"/output/"
-	return output_path
-
-def simulationExample():
-	'''A simple test for the hpyp model, in Train-Test mode, 100 samples and all parameters setted to 1.'''
-	print("Start simple test with 100 samples and parameters 1,1,1,1")
-	train_data = getDataFolder()+"train.txt"
-	test_data = getDataFolder()+"test.txt"
-	estimations = getOutputFolder() + "estimations_simulationExample.txt"
-	perfomance = getOutputFolder() + "perfomance_simulationExample.txt"
-
-	bm.hpypTT(train_data,test_data, 100, 1,1,1,1, estimations, perfomance)
-
-def hpypTT(train_data_file, test_data_file ,samples =100, da = 1, db = 1, sr = 1, ss = 1, sim_name = "",):
+def hpypSimulationTWT(samples =500, burnin=400, da = 1, db = 1, sr = 1, ss = 1, lambda_in=0.7, nSim=1):
 	'''Train test model'''
 	print("Start alghorithm with "+str(samples)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
-	train_data = getDataFolder()+train_data_file
-	test_data = getDataFolder()+test_data_file
-	estimations = getOutputFolder() +sim_name+"_estimations_samples"+str(samples)+"_da"+str(da)+"_db"+str(db)+"_sr"+str(sr)+"_ss"+str(ss)+".txt"
-	perfomance = getOutputFolder() +sim_name+"_perfomance_samples"+str(samples)+"_da"+str(da)+"_db"+str(db)+"_sr"+str(sr)+"_ss"+str(ss)+".txt"
+	train_corpus = "/vagrant/tests/data/triello2/corpus-TWT_train.txt"
+	test_corpus = "/vagrant/tests/data/triello2/corpus-TWT_test.txt"
+	bm.hpypTrainTest(train_corpus, test_corpus, samples, burnin, da, db, sr, ss, nSim)
 
-	bm.hpypTT(train_data, test_data, samples, da, db, sr, ss, estimations, perfomance)
+def shpypSimulationTWT(samples =10000, burnin=9000, da = 1, db = 1, sr = 1, ss = 1, lambda_in=0.7, nSim=1):
+	'''Train test model'''
+	print("Start alghorithm with "+str(samples)+"/"+str(burnin)+" lambda: "+str(lambda_in)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
+	train_corpus1 = "/vagrant/tests/data/triello2/corpus1-tweets_train.txt"
+	train_corpus2 = "/vagrant/tests/data/triello2/corpus2-tvshows_train.txt"
+	train_corpus3 = "/vagrant/tests/data/triello2/corpus3-wikipedia_train.txt"
+	train_corpus = []
+	train_corpus.append(train_corpus1)
+	train_corpus.append(train_corpus2)
+	train_corpus.append(train_corpus3)
 
-def hpypBasic(train_data_file = "simple_train.txt", samples =100, da = 1, db = 1, sr = 1, ss = 1):
-	'''Train and print CRPs generated'''
-	print("Start alghorithm with "+str(samples)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
-	train_data = getDataFolder()+train_data_file
+	test_corpus1 = "/vagrant/tests/data/triello2/corpus1-tweets_test.txt"
+	test_corpus2 = "/vagrant/tests/data/triello2/corpus2-tvshows_test.txt"
+	test_corpus3 = "/vagrant/tests/data/triello2/corpus3-wikipedia_test.txt"
+	test_corpus = []
+	test_corpus.append(test_corpus1)
+	test_corpus.append(test_corpus2)
+	test_corpus.append(test_corpus3)
 
-	bm.pypTrainBase(train_data, samples, da, db, sr, ss)
+	bm.shpypTrainTest(train_corpus, test_corpus, samples, burnin, da, db, sr, ss, lambda_in, nSim)
 
-def spypBasic(train_data_file = "simple_train.txt", samples =1000, da = 1, db = 1, sr = 1, ss = 1):
-	'''Train and print CRPs generated for a spyp process'''
-	print("Start alghorithm with "+str(samples)+" samples and parameters: "+str(da)+","+str(db)+","+str(sr)+","+str(ss))
-	train_data = getDataFolder()+train_data_file
-	text_names = [getDataFolder()+train_data_file, getDataFolder()+train_data_file]
-	bm.spypTrainBase(text_names, samples, da, db, sr, ss)
+def shpypSimulation(train_corpus, test_corpus, samples =10000, burnin=9000, da = 1, db = 1, sr = 1, ss = 1, lambda_in=0.7, nSim=1):
+	'''Train test model'''
+	bm.shpypTrainTest(train_corpus, test_corpus, samples, burnin, da, db, sr, ss, lambda_in, nSim)
+
+
+
+
+
 
